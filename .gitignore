@@ -16,3 +16,4 @@ node_modules
 
 # Mac crap
 *.DS_Store
+bin/secret_settings.js

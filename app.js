@@ -19,6 +19,4 @@ app.use(function(req, res) {
   res.render('home');
 });
 
-console.log('app started (:');
-
 module.exports = app;
