@@ -1,0 +1,19 @@
+{
+  "name": "DeveloperDemetriSite",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Website for DeveloperDemetri",
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "~4.13.4",
+    "fs": "0.0.1-security"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developerDemetri/materialize_profile"
+  },
+  "license": "MIT"
+}
