@@ -1,10 +1,10 @@
 {
   "name": "DeveloperDemetriSite",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Website for DeveloperDemetri",
   "scripts": {
-    "start": "pm2 start ./bin/home_site"
+    "start": "node ./bin/home_site"
   },
   "dependencies": {
     "ejs": "^2.4.2",
