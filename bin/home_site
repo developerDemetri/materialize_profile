@@ -13,10 +13,12 @@ const SECRET_SETTINGS = require('./secret_settings');
 const PORT = normalizePort(SECRET_SETTINGS.PORT);
 const KEY = fs.readFileSync(SECRET_SETTINGS.KEY_PATH);
 const CERT = fs.readFileSync(SECRET_SETTINGS.CERTIFICATE_PATH);
+const CA = fs.readFileSync(SECRET_SETTINGS.CA_PATH);
 
 const HTTPS_OPTIONS = {
     key: KEY,
-    cert: CERT
+    cert: CERT,
+    ca: CA
 };
 
 app.set('port', PORT);
