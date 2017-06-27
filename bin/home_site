@@ -5,34 +5,38 @@
  */
 
 let app = require('../app');
-let https = require('https');
-let fs = require('fs');
-
 const SECRET_SETTINGS = require('./secret_settings');
-
 const PORT = normalizePort(SECRET_SETTINGS.PORT);
-const KEY = fs.readFileSync(SECRET_SETTINGS.KEY_PATH);
-const CERT = fs.readFileSync(SECRET_SETTINGS.CERTIFICATE_PATH);
-const CA = fs.readFileSync(SECRET_SETTINGS.CA_PATH);
+let server = null;
 
-const HTTPS_OPTIONS = {
+if (SECRET_SETTINGS.USE_SSL) {
+  let https = require('https');
+  let fs = require('fs');
+  const KEY = fs.readFileSync(SECRET_SETTINGS.KEY_PATH);
+  const CERT = fs.readFileSync(SECRET_SETTINGS.CERTIFICATE_PATH);
+  const CA = fs.readFileSync(SECRET_SETTINGS.CA_PATH);
+  const HTTPS_OPTIONS = {
     key: KEY,
     cert: CERT,
     ca: CA
-};
+  };
+  /**
+   * Create HTTPS server.
+   */
+  server = https.createServer(HTTPS_OPTIONS, app);
+}
+else {
+  let http = require('http');
+  server = http.createServer(app);
+}
 
 app.set('port', PORT);
 
-/**
- * Create HTTPS server.
- */
 
-let server = https.createServer(HTTPS_OPTIONS, app);
 
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 server.listen(PORT);
 server.on('error', onError);
 server.on('listening', onListening);
@@ -40,7 +44,6 @@ server.on('listening', onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
-
 function normalizePort(val) {
   let port = parseInt(val, 10);
   if (isNaN(port)) {
@@ -57,7 +60,6 @@ function normalizePort(val) {
 /**
  * Event listener for HTTP server "error" event.
  */
-
 function onError(error) {
   if (error.syscall !== 'listen') {
     throw error;
@@ -83,7 +85,6 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-
 function onListening() {
   let addr = server.address();
   let bind = typeof addr === 'string'
