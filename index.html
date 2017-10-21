@@ -4,19 +4,21 @@
       <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta charset="UTF-8">
-      <meta name="description" content="Portfolio Site for Software Developer Demetrius Shargani">
-      <meta name="keywords" content="Demetrius, Demetri, Shargani, Jones-Shargani, DeveloperDemetri, Software, Developer">
+      <meta name="description" content="Portfolio Site for Software Engineer Demetrius Shargani">
+      <meta name="keywords" content="Demetrius, Demetri, Shargani, Jones-Shargani, DeveloperDemetri, Software, Developer, Engineer">
       <meta name="author" content="DeveloperDemetri">
       <title>Developer Demetri</title>
-      <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons"/>
-      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"  media="screen,projection"/>
       <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.min.css">
-      <link type="text/css" rel="stylesheet" href="css/app.css"/>
-      <link rel="shortcut icon" href="img/profPicFavicon.ico">
-      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+      <style>
+        .profPic {padding: 2rem;}
+        .nameHead {margin-top: 0rem;}
+      </style>
+      <link rel="shortcut icon" href="https://d3hd75bhu1xedi.cloudfront.net/profPicFavicon.ico">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
       <script type="text/javascript" src="https://use.fontawesome.com/dcbb5f6e26.js"></script>
-      <script type ="text/javascript" src="js/easter_eggs.js"></script>
     </head>
     <body class="grey lighten-4 blue-grey-text text-darken-4">
       <nav>
@@ -26,13 +28,12 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#apps">Apps</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
       <div class="center-align">
-        <img src="img/profPic.jpg" class="circle responsive-img profPic"/>
+        <img src="https://d3hd75bhu1xedi.cloudfront.net/profPic.jpg" class="circle responsive-img profPic"/>
         <h1 class="nameHead">Demetrius Shargani</h1>
       </div>
       <div class="divider deep-purple"></div>
@@ -107,9 +108,11 @@
               <h6>Software Engineer</h6>
               <h6>May 2017 - Present</h6>
               <p class="left-align">
-                Developing Big Data products for GoDaddy's Cloud Platform using open source software including Apache Kafka, Cassandra, Hadoop, and Elasticsearch. 
-                Configuring and orchestrating clusters across multiple environments with Salt and Puppet. 
+                Building and maintaining a critical big data pipeline centered around Apache Kafka, closely integrated with large open source data stores such as HDFS, Cassandra, and Elasticsearch.
+                Patching and upgrading large open source Kafka and Fluentd related projects to meet evolving user needs.
+                Configuring and orchestrating clusters across multiple environments with Salt and Puppet.
                 Automating builds and deployments with Jenkins to various platforms including Artifactory and Yum.
+                Managing team agile process and rituals as Scrum Master.
               </p>
             </div>
             <div class="col s12 m6 center-align">
@@ -163,34 +166,14 @@
           </div>
         </div>
       </div>
-      <div class="divider deep-purple"></div>
-      <div class="container">
-        <div class="center-align" id="apps">
-          <div class="row deep-purple-text center-align">
-            <h2>Apps <i class="fa fa-laptop"></i></h2>
-          </div>
-          <div class="row">
-            <div class="col s12 m6">
-              <a href="https://boredwithfriends.herokuapp.com/" target="_blank"><h4 class="blue-grey-text text-darken-4">Bored With Friends</h4></a>
-              <h6>Simple responsive app for indecisive friend groups. Written in NodeJS, styled with Materialize and powered by Heroku.</h6>
-              <h6>View on <a href="https://github.com/developerDemetri/BoredWithFriends" target="_blank">Github <i class="fa fa-github"></i></a> or test on <a href="https://boredwithfriends.herokuapp.com/" target="_blank">Heroku <i class="icon-heroku"></i></a></h6>
-            </div>
-            <div class="col s12 m6">
-              <a href="https://devdemetriblog.herokuapp.com/" target="_blank"><h4 class="blue-grey-text text-darken-4">DevDemetri Blog</h4></a>
-              <h6>Simple responsive blogging app to help me learn Ruby on Rails.</h6>
-              <h6>View on <a href="https://github.com/developerDemetri/rails-blog" target="_blank">Github <i class="fa fa-github"></i></a> or test on <a href="https://devdemetriblog.herokuapp.com/" target="_blank">Heroku <i class="icon-heroku"></i></a></h6>
-            </div>
-          </div>
-        </div>
-      </div>
       <footer class="page-footer deep-purple lighten-1 grey-text text-lighten-4">
           <div class="container">
             <div class="row">
               <div id="contact" class="center-align">
                 <h3 class="white-text">Contact</h3>
                 <div class="grey-text text-lighten-4">
-                <p>If you are a recruiter, please contact me via <a class="teal-text text-accent-1" href="https://www.linkedin.com/in/demetrius-jones-shargani-920a1981" target="_blank">LinkedIn <i class="fa fa-linkedin-square"></i></a></p>
-                <p>Fellow developers, feel free to check out my <a class="teal-text text-accent-1" href="https://github.com/developerDemetri" target="_blank">GitHub <i class="fa fa-github"></i></a> or <a class="teal-text text-accent-1" href="http://stackoverflow.com/users/5702582/developerdemetri?tab=profile" target="_blank">Stack Overflow <i class="fa fa-stack-overflow"></i></a></p>
+                <p>If you are a recruiter, please contact me via <a class="teal-text text-accent-1" href="https://www.linkedin.com/in/demetrius-shargani-920a1981" target="_blank">LinkedIn <i class="fa fa-linkedin-square"></i></a></p>
+                <p>Fellow developers, feel free to check out my <a class="teal-text text-accent-1" href="https://github.com/developerDemetri" target="_blank">GitHub <i class="fa fa-github"></i></a> or <a class="teal-text text-accent-1" href="https://stackoverflow.com/users/5702582/developerdemetri?tab=profile" target="_blank">Stack Overflow <i class="fa fa-stack-overflow"></i></a></p>
                 <p>Thank You to <a class="teal-text text-accent-1" href="http://materializecss.com/" target="_blank">Materialize</a>, <a class="teal-text text-accent-1" href="https://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awesome</a>, and <a class="teal-text text-accent-1" href="http://fizzed.com/oss/font-mfizz" target="_blank">Font Mfizz</a> for helping me style this site <i class="fa fa-smile-o"></i></p>
                 </div>
               </div>
